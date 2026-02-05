@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: noor
+Version: 1.0.0
+Summary: Live age calculator showing your life in seconds
+Author: Noor
+Requires-Python: >=3.8
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary

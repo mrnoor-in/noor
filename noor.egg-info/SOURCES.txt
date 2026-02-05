@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+noor/__init__.py
+noor/cli.py
+noor.egg-info/PKG-INFO
+noor.egg-info/SOURCES.txt
+noor.egg-info/dependency_links.txt
+noor.egg-info/entry_points.txt
+noor.egg-info/top_level.txt
