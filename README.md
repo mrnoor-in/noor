@@ -12,10 +12,10 @@ It shows how long you have lived on Earth in:
 ## Install
 
 ```bash
-pip install noor
+pip install noor-cli
+noor --dob 2000-01-01
 
 
-noor
 Enter your date of birth in this format:
 Copy code
 
