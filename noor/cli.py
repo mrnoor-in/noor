@@ -3,47 +3,47 @@ from datetime import datetime
 import os
 import sys
 
-def clear_screen():
+def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 def main():
-    clear_screen()
+    clear()
     print("🌍 Noor — Live Age Calculator")
     print("Enter your Date of Birth (YYYY-MM-DD)")
     dob = input("> ").strip()
 
     try:
-        birth_date = datetime.strptime(dob, "%Y-%m-%d")
+        birth = datetime.strptime(dob, "%Y-%m-%d")
     except ValueError:
-        print("❌ Invalid date format. Use YYYY-MM-DD")
+        print("❌ Invalid date format")
         sys.exit(1)
 
     try:
         while True:
             now = datetime.utcnow()
-            diff = now - birth_date
+            diff = now - birth
 
-            total_seconds = int(diff.total_seconds())
-            minutes = total_seconds // 60
-            hours = total_seconds // 3600
+            seconds = int(diff.total_seconds())
+            minutes = seconds // 60
+            hours = seconds // 3600
             days = diff.days
-            years = total_seconds / (365.2425 * 24 * 3600)
+            years = seconds / (365.2425 * 24 * 3600)
 
-            clear_screen()
+            clear()
             print("🌍 Noor — Your Life on Earth")
-            print("--------------------------------")
+            print("----------------------------")
             print(f"Years   : {years:.9f}")
             print(f"Days    : {days}")
             print(f"Hours   : {hours}")
             print(f"Minutes : {minutes}")
-            print(f"Seconds : {total_seconds}")
-            print("--------------------------------")
-            print("Press Ctrl + C to exit")
+            print(f"Seconds : {seconds}")
+            print("----------------------------")
+            print("Press Ctrl+C to exit")
 
             time.sleep(1)
 
     except KeyboardInterrupt:
-        print("\n👋 Goodbye!")
+        print("\n👋 Goodbye")
 
 if __name__ == "__main__":
     main()
